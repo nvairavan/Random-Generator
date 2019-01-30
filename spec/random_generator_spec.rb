@@ -2,8 +2,9 @@ require 'spec_helper'
 
 describe Generator do
 
+  random_number = rand(2..10)
   before(:all) do
-    @postcodes_array = Generator.new.postcodes.random_array(rand(2..10))
+    @postcodes_array = Generator.new.postcodes.random_array(random_number)
   end
 
   it 'should generate array of random postcodes' do
@@ -12,7 +13,7 @@ describe Generator do
   end
 
   it 'should generated array of random postcodes must be less than 10' do
-    expect(@postcodes_array.length).to be_between(2, 10)
+    expect(@postcodes_array.length).to eq random_number
   end
 
   it 'should length of the postcode be less than 8 characters' do
