@@ -21,7 +21,7 @@ class RandomPostcodes
   end
 end
 
-rand = RandomPostcodes.new
-result = rand.random_array(rand(2..10))
-p result.length
-p result
+# rand = RandomPostcodes.new
+# result = rand.random_array(rand(2..10))
+# p result.length
+# p result
