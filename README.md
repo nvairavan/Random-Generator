@@ -16,12 +16,15 @@ Aim of this lab is to get better understanding of API(Application programming in
 1. Create lib folder
 2. Put the code into the lib folder
 4. Instantiate the super class Generator.rb in your _spec.rb file
+        
         e.g. @postcodes_array = Generator.new.postcodes.random_array(random_number)
 5. Open your spec_helper.rb and require_relative with the given path of the Generator.rb file
+        
         eg. require 'rspec'
             require_relative '../Generator'
 6. Run the method within that Generator.rb superclass
 7. Create a variable to store the result using the random number array you create
+        
         e.g. random_number = rand(2..10)
 
 ### Challenges
