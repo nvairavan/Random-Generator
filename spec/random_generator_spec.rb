@@ -16,8 +16,9 @@ describe Generator do
   end
 
   it 'should length of the postcode be less than 8 characters' do
-    expect(@postcodes_array.first.length).to be <= 8
-    expect(@postcodes_array.last.length).to be <= 8
+    @postcodes_array.each do |postcode|
+      expect(postcode.length).to be <= 8
+    end
   end
 
   it 'should return the individual postcodes as a string' do
@@ -26,5 +27,9 @@ describe Generator do
     end
   end
 
-  
+  it 'should return postcodes starting with letters' do
+    @postcodes_array.each do |postcode|
+      expect(postcode).to start_with /[A-Z]/
+    end
+  end
 end
